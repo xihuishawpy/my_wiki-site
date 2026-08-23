@@ -1,3 +1,8 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm ci",
+  "buildCommand": "npx quartz build",
+  "outputDirectory": "public",
   "cleanUrls": true
 }
