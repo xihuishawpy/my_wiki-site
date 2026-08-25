@@ -1,11 +1,16 @@
 ---
 type: note
 publish: true
+article-number: N008
+tags:
+  - AI 与智能系统
 created: 2026-08-23
-updated: 2026-08-23
+updated: 2026-08-25
 ---
 
 # 构建与部署 AI 应用的六类能力
+
+> 编号：N008 · 主题：AI 与智能系统
 
 ## 摘要
 

@@ -1,11 +1,16 @@
 ---
 type: note
 publish: true
+article-number: N015
+tags:
+  - AI 与智能系统
 created: 2026-08-25
 updated: 2026-08-25
 ---
 
 # Agentic RAG 六步工作流
+
+> 编号：N015 · 主题：AI 与智能系统
 
 ## 摘要
 

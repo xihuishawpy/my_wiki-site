@@ -1,6 +1,9 @@
 ---
 type: source
 publish: true
+article-number: S011
+tags:
+  - AI 与智能系统
 source-type: 其他
 author: Dify
 url: https://dify.ai
@@ -9,6 +12,8 @@ updated: 2026-08-25
 ---
 
 # Dify 核心功能与能力调研
+
+> 编号：S011 · 主题：AI 与智能系统
 
 ## 摘要
 

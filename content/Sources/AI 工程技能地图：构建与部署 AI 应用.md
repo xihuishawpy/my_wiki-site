@@ -1,14 +1,19 @@
 ---
 type: source
 publish: true
+article-number: S008
+tags:
+  - AI 与智能系统
 source-type: 文章
 author: Andrew Ng
 url: https://charonhub.deeplearning.ai/he-ai-engineering-skills-map-in-detail-building-and-deploying-ai-applications/
 created: 2026-08-23
-updated: 2026-08-23
+updated: 2026-08-25
 ---
 
 # AI 工程技能地图：构建与部署 AI 应用
+
+> 编号：S008 · 主题：AI 与智能系统
 
 ## 摘要
 

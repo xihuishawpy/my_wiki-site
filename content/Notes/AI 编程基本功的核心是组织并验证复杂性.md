@@ -1,11 +1,16 @@
 ---
 type: note
 publish: true
+article-number: N013
+tags:
+  - AI 与智能系统
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 ---
 
 # AI 编程基本功的核心是组织并验证复杂性
+
+> 编号：N013 · 主题：AI 与智能系统
 
 ## 摘要
 

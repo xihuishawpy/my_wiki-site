@@ -1,14 +1,19 @@
 ---
 type: source
 publish: true
+article-number: S010
+tags:
+  - AI 与智能系统
 source-type: 视频
 author: Matt Pocock、Robert C. Martin
 url:
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 ---
 
 # Matt Pocock 与 Robert C. Martin：AI 编程为何仍需基本功
+
+> 编号：S010 · 主题：AI 与智能系统
 
 ## 摘要
 

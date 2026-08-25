@@ -1,14 +1,19 @@
 ---
 type: source
 publish: true
+article-number: S003
+tags:
+  - AI 与智能系统
 source-type: 其他
 author: Jason Wei
 url:
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-25
 ---
 
 # Jason Wei 关于小模型与工具的观点
+
+> 编号：S003 · 主题：AI 与智能系统
 
 ## 摘要
 

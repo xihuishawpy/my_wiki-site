@@ -1,11 +1,16 @@
 ---
 type: note
 publish: true
+article-number: N004
+tags:
+  - AI 与智能系统
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-25
 ---
 
 # 从运行轨迹构建 AI 评估体系
+
+> 编号：N004 · 主题：AI 与智能系统
 
 ## 摘要
 

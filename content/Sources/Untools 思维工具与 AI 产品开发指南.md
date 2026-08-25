@@ -1,14 +1,19 @@
 ---
 type: source
 publish: true
+article-number: S001
+tags:
+  - 产品与设计
 source-type: 文章
 author:
 url: https://untools.co/
 created: 2026-08-17
-updated: 2026-08-17
+updated: 2026-08-25
 ---
 
 # Untools 思维工具 × AI 产品开发：全量研究与复用指南
+
+> 编号：S001 · 主题：产品与设计
 
 > 研究日期：2026-08-17  
 > 研究范围：Untools 官网当前公开的 **25 个 thinking tools**。  

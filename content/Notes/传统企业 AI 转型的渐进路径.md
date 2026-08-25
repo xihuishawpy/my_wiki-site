@@ -1,11 +1,16 @@
 ---
 type: note
 publish: true
+article-number: N001
+tags:
+  - AI 与智能系统
 created: 2026-08-17
-updated: 2026-08-17
+updated: 2026-08-25
 ---
 
 # 传统企业 AI 转型的渐进路径
+
+> 编号：N001 · 主题：AI 与智能系统
 
 ## 摘要
 

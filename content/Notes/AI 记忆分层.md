@@ -1,11 +1,16 @@
 ---
 type: note
 publish: true
+article-number: N003
+tags:
+  - AI 与智能系统
 created: 2026-08-17
-updated: 2026-08-17
+updated: 2026-08-25
 ---
 
 # AI 记忆分层
+
+> 编号：N003 · 主题：AI 与智能系统
 
 ## 摘要
 

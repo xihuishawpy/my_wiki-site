@@ -1,14 +1,19 @@
 ---
 type: source
 publish: true
+article-number: S009
+tags:
+  - AI 与智能系统
 source-type: 文章
 author:
 url: https://blog.anionex.me/archives/deepseek-harness-agent-os
 created: 2026-08-23
-updated: 2026-08-23
+updated: 2026-08-25
 ---
 
 # DeepSeek Harness 架构解析：从 Coding Agent 到 Agent OS
+
+> 编号：S009 · 主题：AI 与智能系统
 
 ## 摘要
 

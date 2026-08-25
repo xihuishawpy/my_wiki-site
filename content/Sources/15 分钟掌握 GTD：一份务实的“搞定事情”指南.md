@@ -1,14 +1,19 @@
 ---
 type: source
 publish: true
+article-number: S004
+tags:
+  - 个人效能
 source-type: 文章
 author: Erlend Hamberg
 url: https://hamberg.no/gtd/
 created: 2026-08-23
-updated: 2026-08-23
+updated: 2026-08-25
 ---
 
 # 15 分钟掌握 GTD：一份务实的“搞定事情”指南
+
+> 编号：S004 · 主题：个人效能
 
 ## 摘要
 

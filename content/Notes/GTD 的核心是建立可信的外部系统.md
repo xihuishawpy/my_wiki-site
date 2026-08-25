@@ -1,11 +1,16 @@
 ---
 type: note
 publish: true
+article-number: N012
+tags:
+  - 个人效能
 created: 2026-08-23
-updated: 2026-08-23
+updated: 2026-08-25
 ---
 
 # GTD 的核心是建立可信的外部系统
+
+> 编号：N012 · 主题：个人效能
 
 ## 摘要
 
