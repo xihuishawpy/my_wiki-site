@@ -12,10 +12,6 @@ created: 2026-08-23
 updated: 2026-08-25
 ---
 
-# DeepSeek Harness 架构解析：从 Coding Agent 到 Agent OS
-
-> 编号：S009 · 主题：AI 与智能系统
-
 ## 摘要
 
 DeepSeek Harness（DSH）把模型、工具、策略、存储、上下文、界面乃至 Agent Loop 都纳入统一插件运行时，并通过 Profile、Preset、Capability Provider、Session Event Log 和动态插件机制组织 Agent。它展示了 Coding Agent 从固定工具外壳走向可声明、可替换、可分层、可观测且可局部自修改的 Agent Runtime，但插件契约、分发、隔离和长会话重组语义仍未成熟。
