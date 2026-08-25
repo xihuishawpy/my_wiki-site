@@ -30,6 +30,7 @@ scope: long-term
 - [[DeepSeek Harness 架构解析：从 Coding Agent 到 Agent OS]] — 从插件运行时、能力接口、事实日志和动态扩展理解 DSH 的 Agent OS-like 架构
 - [[Matt Pocock 与 Robert C. Martin：AI 编程为何仍需基本功]] — 完整保存访谈，并整理质量约束、上下文分工、敏捷迭代与新人培养的共识和分歧
 - [[Dify 核心功能与能力调研]] — 基于官方资料梳理 Dify 的应用编排、RAG、Agent、插件、交付、治理与部署边界
+- [[RAGFlow 核心知识处理与切片策略技术调研]] — 基于官方资料拆解文档解析、切片增强、索引、混合检索及生成边界
 
 ### 产品与设计
 
