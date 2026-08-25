@@ -1,4 +1,5 @@
 ---
+title: "N001 · 传统企业 AI 转型的渐进路径"
 type: note
 publish: true
 article-number: N001

@@ -1,4 +1,5 @@
 ---
+title: "N008 · 构建与部署 AI 应用的六类能力"
 type: note
 publish: true
 article-number: N008

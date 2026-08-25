@@ -1,4 +1,5 @@
 ---
+title: "S011 · Dify 核心功能与能力调研"
 type: source
 publish: true
 article-number: S011

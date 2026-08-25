@@ -1,4 +1,5 @@
 ---
+title: "S003 · Jason Wei 关于小模型与工具的观点"
 type: source
 publish: true
 article-number: S003

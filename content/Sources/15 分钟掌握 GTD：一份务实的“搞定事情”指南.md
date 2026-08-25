@@ -1,4 +1,5 @@
 ---
+title: "S004 · 15 分钟掌握 GTD：一份务实的“搞定事情”指南"
 type: source
 publish: true
 article-number: S004

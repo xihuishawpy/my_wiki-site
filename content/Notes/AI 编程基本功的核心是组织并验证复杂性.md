@@ -1,4 +1,5 @@
 ---
+title: "N013 · AI 编程基本功的核心是组织并验证复杂性"
 type: note
 publish: true
 article-number: N013

@@ -1,4 +1,5 @@
 ---
+title: "S010 · Matt Pocock 与 Robert C. Martin：AI 编程为何仍需基本功"
 type: source
 publish: true
 article-number: S010

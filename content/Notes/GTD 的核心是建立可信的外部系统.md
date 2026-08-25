@@ -1,4 +1,5 @@
 ---
+title: "N012 · GTD 的核心是建立可信的外部系统"
 type: note
 publish: true
 article-number: N012

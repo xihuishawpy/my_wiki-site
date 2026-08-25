@@ -1,4 +1,5 @@
 ---
+title: "N004 · 从运行轨迹构建 AI 评估体系"
 type: note
 publish: true
 article-number: N004

@@ -1,4 +1,5 @@
 ---
+title: "S008 · AI 工程技能地图：构建与部署 AI 应用"
 type: source
 publish: true
 article-number: S008
