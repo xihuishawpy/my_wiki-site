@@ -502,13 +502,6 @@ ChatAgent 时代常见流程是：`核心评测员对齐 -> 外包对齐 -> 机�
 |[WildClawBench](https://github.com/InternLM/WildClawBench)|[WildClawBench：野生环境 AI Agent 能力评测 10 大模型谁的"龙虾"最强？](https://www.ai-insight.org/reports/wildclaw-bench-2026)核心理念是"在野生环境中测试 Agent"——不是给模型一个精心设计的沙盒，而是把它扔进真实用户每天使用 OpenClaw Agent 的场景中，看它能不能活下来。|500|Skill|
 
 
-
-![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0DxQNyZx9Jemlj2Vzhcdh8GO30t6veaa2QJX0l2tuv2YFX21YS4wib0o4YVdemC7icPGSbV1wEia8M4sJIJickcoZXqcZBRTt6fumQg/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=20)
-
-欢迎大家积极留言，分享自己在评测过程中踩过的坑，也欢迎大家对文中评测核心方法论发表自己的看法或者见解。
-
-----------  END  ----------
-
  推荐阅读 
 
 | [用Agent评测思路管理AI Coding —— 31万行代码AI重构的实践](https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651782575&idx=1&sn=c4c3e41bf57fe08b573ccf76d83cd270&scene=21#wechat_redirect)
