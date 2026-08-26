@@ -27,12 +27,6 @@ updated: 2026-08-26
 
 ## 原文
 
-本篇博客是一篇科普文章，由浅入深的介绍Agent评测。其中前两章系统介绍了评测是什么，以及如何建立评测体系；其中第二章是美团图灵Agent评测团队深入美团各业务团队BP总结出的实践经验，是我们在两年实践过程中逐步打磨出来的认知。第三章重点介绍了龙虾/爱马仕这类长程Agent框架的出现对评测带来的变化。
-
-本篇博客在美团内部发表之后获得了较多的关注，我们发现大家对Agent评测的热情非常高，因此我们决定将内部博客进行公开，想把这些经验分享给更多的同学，希望对大家有所启发或帮助。
-
-🎈我们还在文末增加了读者互动环节，欢迎大家晒出自己的见解、思考，分享实践经验，一起交流学习。
-
 本文目录
 
 - 一、Agent评测是什么
@@ -92,7 +86,7 @@ updated: 2026-08-26
 
 评测方法会随着 AI 形态变化而变化，大致经历了三个阶段：
 
-![[Sources/Agent评测漫谈-01.png]]
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0Dz6opSqDYibuBA0EdG2n9NAMlBTIL9ubQhibX9OOOicGU7eEOjKEQHFjbb4ZlXqJ2ibY03XbgnbptcAO5YJhxFFDKGG6M5CChZnE8s/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=1)
 
 传统机器学习更像在回答“算得准不准”。 大模型评测开始回答“模型能力强不强”。 而 Agent 评测真正要回答的是：
 
@@ -126,11 +120,11 @@ updated: 2026-08-26
 
 #### | 1.4 为什么说观测是评测的基石
 
-有一个朴素的认知：Agent 属于广义的 SaaS 层，大模型赋予Agent泛化能力但也带出随机性的问题，而用户仍旧期望得到一个稳定可靠的智能体。为了弥合“随机性”与“可靠性”之间的鸿沟，我们必须回归工程视角看待Agent —— **看不见的问题，几乎不可能被稳定解决**。
+有一个朴素的认知：Agent 属于广义的 SaaS 层，大模型赋予Agent泛化能力但也带出随机性的问题，而用户仍旧期望得到一个稳定可靠的智能体。为了弥合“随机性”与“可靠性”之间的鸿沟，我们必须回归工程视角看待Agent —— **看不见的问题，几乎不可能被稳定解决**。
 
 Agent 的一次执行通常包含如下链路：
 
-![[Sources/Agent评测漫谈-02.png]]
+![图片](https://mmecoa.qpic.cn/sz_mmecoa_png/V95GN2mm0DwmSdU3QY9EJvEeiaKb0TK9Qzib6BoevTkzicV1Q6ib9T8baS8M62mvpYlYPf4CNQmXbJhpV5lKK7Bo9eMN6ZV7BXV05DL3NrNJhWc/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=2)
 
 只要其中任意一层出问题，最终效果都可能劣化。为了结果稳定，我们需要过程稳定。但如果日志系统只能看到“用户说了什么”和“最后回复了什么”，就几乎无法判断问题根因。正是基于“**我想看Case却发现没打日志**”这个朴素的问题，工业界发展出了 Trace 系统，将黑盒内部的逻辑推理过程进行全路径的披露，将所有影响模型输出的输入信息都记录下来。
 
@@ -146,11 +140,11 @@ Agent 的一次执行通常包含如下链路：
 
 有的同学会好奇，为什么一定要“搭桥”？这是因为Agent评测体系必须追求业务价值与评测指标之间的解释性。而Agent 评测的难点之一，是模型能力指标和业务结果指标之间有天然鸿沟。
 
-![[Sources/Agent评测漫谈-03.png]]
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0DxiaOibeZNMa769q18GczZl9VTGHicEPzsicOTImJnzIOw24gWqvfCqYFgeQXvols5hlMszv5a7g26XKVHQOWwMnJHn6JEtSPfrXl0/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=3)
 
 这两类指标不能直接映射，中间必须有一层面向任务系统的桥梁指标。我们提供一种分层思路如下：
 
-![[Sources/Agent评测漫谈-04.png]]
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0Dzye1haycLoU75kx3GA84g45zm7geSfyPic6JZRicX6y2pYmd578HibuR3DcVF6gxFMFibXJHoViaWib7TzKEibBRxaPGOUWLyHraSvjE/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=4)
 
 以 AI 搜索为例，业务可能关心DAU、留存和点击；搜索系统本身关心召回率和点击率；Agent 层则关心意图识别是否准确、检索是否有效、结果整合是否可信。
 
@@ -160,7 +154,7 @@ Agent 的一次执行通常包含如下链路：
 
 经过第一章的介绍，我们知道，Agent的核心目标就是要稳定地交付好的结果。行业内 Agent 评测大量借鉴了大模型评测的方法论，总体上可以拆成客观评测和主观评测：
 
-![[Sources/Agent评测漫谈-05.png]]
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0DxUoQG7Rvwfy5XvCWW8vMzBBe7OjLFicvWuYibpKVRKQmPIpgeicb2YWIbZWhYt4ib12bER9v3NSbbxMKdQc02XKdrFiaaJVZpVSqlk/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=5)
 
 因此更现实的做法通常是：
 
@@ -182,7 +176,7 @@ Agent 的一次执行通常包含如下链路：
 - **人人一致**：1个“独裁者”好过10个“民主者”。需要一位强有力的角色，拉齐产品、运营、研发、QA的评测标准，遵循同一套评测体系，避免大家各自为政。不同评测员通过背靠背标注的方法拉齐标准。
 
 
-![[Sources/Agent评测漫谈-06.png]]
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0DxEak5oAUDgUk3ajpyP5K2FvSIdbYa96wn5I44sh6VAmJuERf3iaibKUALWh1ssPgpL75nF2eI90pMzUr1kDrU5nmtFL8sVBK2Os/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=6)
 
 - **人机一致**：机器评测结果与人工评测结果保持一致，否则不置信。人机一致的意义在于规模化提效，以应对更大的业务流量。
 
@@ -202,7 +196,7 @@ Agent 的一次执行通常包含如下链路：
 
 案例一：如何评价初中生作文的好坏？（满分40分）
 
-![[Sources/Agent评测漫谈-07.png]]
+![图片](https://mmecoa.qpic.cn/sz_mmecoa_png/V95GN2mm0Dxib32ZRGQTr46U5xJl1c9MorP4UZ2ia2O4m3NIDoIEmOEc0l3qNaUjQwUgXicGNTDcViaoVt1jniaArWGyLPpAWApvIoajSz0R6SKE/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=7)
 
 案例二：以骑手外呼场景模型回复是否“口语化”举例
 
@@ -265,11 +259,11 @@ Agent 的一次执行通常包含如下链路：
 
 从GPT 3.5发布至今，虽然基座能力发生了天翻地覆的变化，但是模型能力终究不是万能的。在过去三年的Agent实践中，我们遇到过大量脱离实际的“许愿式”需求。我们要知道模型是训练出来的，模型本身拟合了Token的概率分布，即便在大规模参数下会产生能力的“涌现”，但模型能力的提升依旧强依赖语料的输入，尤其是高质量语料的输入。无论是早期的RLHF，还是如今的DPO、GRPO等算法，虽然训练架构在不断简化，但对高质量核心数据的依赖从未改变。
 
-例如字节专门设立了众包专家标注平台 Xpert，用于生产地理、代码、法律、医学等专业领域的高质量数据，以此支撑豆包基座模型的迭代训练。基座模型能力的提升，大家的直观感受就是它在一个又一个垂直领域的表现越来越好。
+例如字节专门设立了众包专家标注平台 Xpert，用于生产地理、代码、法律、医学等专业领域的高质量数据，以此支撑豆包基座模型的迭代训练。基座模型能力的提升，大家的直观感受就是它在一个又一个垂直领域的表现越来越好。
 
 因此，当我们在特定垂域面临业务知识语料匮乏（或公网无公开高质数据）的挑战时，通过引入行业专家的知识输入来补足模型/Agent的能力，就成了破局的关键——尤其是在项目的冷启动阶段。
 
-![[Sources/Agent评测漫谈-08.png]]
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0Dyd6WKe62m3WiagLZTJzr6gOl5R4muurscJwt1EzXMbUcLJApWTia27eEYoibhkLap5CrtJkywcZc1JD85pmSic8Tuy5Pro1Z4Eals/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=8)
 
 呼应前文，评测的目的是回答“Agent好不好”，那么谁来定义“好不好”呢？靠最懂业务最有Sense的行业专家。
 
@@ -309,7 +303,7 @@ Agent 的一次执行通常包含如下链路：
 
 长程Agent（Long-horizon Agent）与短程Agent的区别，在于它如何处理“时间跨度带来的复杂性”：
 
-![[Sources/Agent评测漫谈-09.png]]
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0DwbHVNl8DWpyzsVWlicGfTkxIsY45YogpWgbHKPe35w4FkqibyxaLq7VicV0Phl95H6PMETzAanTNr72OoO5gxTqPNb94gKyF6sX8/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=9)
 
 这些差异会为观测评测带来怎样的变化呢？
 
@@ -319,11 +313,11 @@ Agent 的一次执行通常包含如下链路：
 
 这类场景的共同特点是：Agent 更多是在“回答问题”，进行少量的系统操作，而不是“进入操作系统执行任务”。典型应用场景，例如AI搜索、客服机器人。此类Agent评测重点通常落在回答本身，例如：
 
-![[Sources/Agent评测漫谈-10.png]]
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0Dzs58hNXt6SibXdrNtM4JwkKwB1lFcMaNh45zwUfnHfrCm6UxG2x0pm9X8uEUjal6DNMApscDbL6EG8F0uxQyBmiaibicKaeaFjCEk/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=10)
 
 在过去1年的发展中图灵形成了成熟的解决方案，包括人工评测、机器评测，部分案例如下：
 
-![[Sources/Agent评测漫谈-11.png]]
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0DyCbiavTuEaqCRQqyQx2MVlJic6vBVoB7H37I9iayrPHs1uYlBY65MvnCQoHFDtNKLByickngpibyxexsaib3f3hpICKAaweyxtd7Bia0/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=11)
 
 #### | 3.2 长程Agent的观测评测
 
@@ -345,7 +339,7 @@ Agent 的一次执行通常包含如下链路：
 - **评测目标**：回答Agent好不好，指出迭代方向
 
 
-![[Sources/Agent评测漫谈-12.png]]
+![图片](https://mmecoa.qpic.cn/sz_mmecoa_png/V95GN2mm0DwHHAlpsFnLmicyQZQqeggIjpKmK8R01bcnOPyCGlnOjbWo7SWG7IecUxA28zaZySMUpYFbf8dEZE9RMdc90WBHKAIYiaRqibxNwc/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=12)
 
 **3.2.2 Skill评测**
 
@@ -355,7 +349,7 @@ Agent 的一次执行通常包含如下链路：
 
 总结起来目前龙虾和Skill相关需求主要 广义的运营提效 场景，大致可以分成三类：
 
-![[Sources/Agent评测漫谈-13.png]]
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0DzVhNYpDb4urViahHjj9XeUhmImb1nr8BCFma4ttgx3vuoYUE7iczQZdehLcy2dISnibUK9E7dbE6zrkWQFdJ6U1icozjbtLmjSXpc/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=13)
 
 用户规模正在从少量专业角色扩展到更广人群
 
@@ -387,11 +381,11 @@ Agent 的一次执行通常包含如下链路：
 
 为了方便大家理解，我们将Skill全生命周期拆解如下：
 
-![[Sources/Agent评测漫谈-14.png]]
+![图片](https://mmecoa.qpic.cn/sz_mmecoa_png/V95GN2mm0Dzh1VHtt5o5yicHMWBEia0cPE4J6nm4OhCwLEswbzy1f9AV5VE5thP8tO56QECad160RVTzCcBUL0LbxQxzQjtvxYp2XOtvuTbA0/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=14)
 
 综上，Skill评测的痛点总体可以拆解成三个方面：
 
-![[Sources/Agent评测漫谈-15.png]]
+![图片](https://mmecoa.qpic.cn/sz_mmecoa_png/V95GN2mm0DzvY82v0PbRgwH6LmdsRxRaFmXD7KkUVKkibVSymF23ZCAicKtK1XX9G7nbbomPNHkoXRic4G8ibECcPbR76xho8tot5nv3av2sbsg/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=15)
 
 **面向Task的评测**
 
@@ -399,7 +393,7 @@ Agent 的一次执行通常包含如下链路：
 
 我们综合了Anthropic以及开源软件对Task的定义，简化如下。
 
-![[Sources/Agent评测漫谈-16.png]]
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0DyKnxBJic7TZiboicEJfL5rSiaymlezlcHU9JNGcz8METkXMq35ddw6zWHANRia35KqnftJ8MPdyunJACGXjDzbA42OFjQKJosyZ5BY/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=16)
 
 prompt定义了我们的问题/诉求，expeted behavior定义了我们预期Agent达成的行为，当我们在正式或测试环境中向Agent发送promt，通过trace获取到长程Agent真实的执行路径，就可以得到（prompt - expeted_behavior - trace）三元组，类似于短程Agent的（query - ground_truth - answer），即可进行评测。
 
@@ -407,7 +401,7 @@ prompt定义了我们的问题/诉求，expeted behavior定义了我们预期Age
 
 可以把两者的差异总结如下：
 
-![[Sources/Agent评测漫谈-17.png]]
+![图片](https://mmecoa.qpic.cn/sz_mmecoa_png/V95GN2mm0DzOKGoYUIr9X7C4DaleTXOeNOiaShRxXnWVHVrw3DmxXLV8doIicMicHyWS6lUfmcXVXrWj5eVmMpaSs5sWhhTvkqgZUPc1al2iaas/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=17)
 
 最本质的变化是：
 
@@ -497,20 +491,31 @@ ChatAgent 时代常见流程是：`核心评测员对齐 -> 外包对齐 -> 机�
 - **评估套件（Evaluation Suite）**：旨在测量特定能力或行为的任务集合。套件中的任务通常共享一个广泛的目标。例如，客户支持评估套件可能测试退款、取消和升级。
 
 
-![[Sources/Agent评测漫谈-18.png]]
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0DwDhlcrU1Ry3SRrnwicZbcZWeWPH6RadePlkeqhKSic6XYvK210rQeYia4KkxNqDYciamWpG9uNLM59bmj0NmeibYib7rr3IkV4cicAV0/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=18)
 
 2026年2月，龙虾在全球爆火时候，社区涌现出面向龙虾评测的开源软件：
 
 |软件名称|简介|GitStar|task定义|
 |---|---|---|---|
 |[pinchbench](https://github.com/pinchbench/skill)|2026年2月开源，是一套专门用于评估OpenClaw的性能基准测试系统。与传统的合成测试（Synthetic Tests）不同，PinchBench 强调“真实场景下的任务模拟”。它通过给 AI 代理布置实际工作中会遇到的复杂任务，来衡量模型在处理多步工作、实际开发与办公环境下的真实表现。|1200+|md文件|
-|[claw eval](https://github.com/claw-eval/claw-eval)|[北大发布的龙虾能力评测](https://claw-eval.github.io/#/architecture)[task列表](https://claw-eval.github.io/#/tasks)  ![[Sources/Agent评测漫谈-19.png]]|500|[yaml文件](https://github.com/claw-eval/claw-eval/blob/main/tasks/C12zh_ecommerce_operations/task.yaml)|
+|[claw eval](https://github.com/claw-eval/claw-eval)|[北大发布的龙虾能力评测](https://claw-eval.github.io/#/architecture)[task列表](https://claw-eval.github.io/#/tasks)  ![图片](https://mmecoa.qpic.cn/sz_mmecoa_jpg/V95GN2mm0DzlPltdF40IDd50lafvapMyrlMICZOHbnWBER370Du7XXwsgXQAlhSGMuVhFXT4icEVqtmyPwgRP9fBibplVorgwRIQgYnPWYtgE/640?wx_fmt=webp&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=19)|500|[yaml文件](https://github.com/claw-eval/claw-eval/blob/main/tasks/C12zh_ecommerce_operations/task.yaml)|
 |[WildClawBench](https://github.com/InternLM/WildClawBench)|[WildClawBench：野生环境 AI Agent 能力评测 10 大模型谁的"龙虾"最强？](https://www.ai-insight.org/reports/wildclaw-bench-2026)核心理念是"在野生环境中测试 Agent"——不是给模型一个精心设计的沙盒，而是把它扔进真实用户每天使用 OpenClaw Agent 的场景中，看它能不能活下来。|500|Skill|
 
+
+
+![图片](https://mmecoa.qpic.cn/mmecoa_png/V95GN2mm0DxQNyZx9Jemlj2Vzhcdh8GO30t6veaa2QJX0l2tuv2YFX21YS4wib0o4YVdemC7icPGSbV1wEia8M4sJIJickcoZXqcZBRTt6fumQg/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=10005&wx_lazy=1#imgIndex=20)
+
+欢迎大家积极留言，分享自己在评测过程中踩过的坑，也欢迎大家对文中评测核心方法论发表自己的看法或者见解。
+
+----------  END  ----------
 
  推荐阅读 
 
 | [用Agent评测思路管理AI Coding —— 31万行代码AI重构的实践](https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651782575&idx=1&sn=c4c3e41bf57fe08b573ccf76d83cd270&scene=21#wechat_redirect)
+
+| [美团正式发布 CatPaw：全场景 AI Agent，从个人提效到企业智能化](https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651783056&idx=1&sn=c5c7f73638bc777077e1b88b6f6acebd&scene=21#wechat_redirect)
+
+| [正式开源！美团 LongCat-2.0 同步开放国产卡推理代码](https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651783022&idx=1&sn=9c28dd11a4d95d5eebbb097e0a1aace0&scene=21#wechat_redirect)
 
 ## 我的思考
 
