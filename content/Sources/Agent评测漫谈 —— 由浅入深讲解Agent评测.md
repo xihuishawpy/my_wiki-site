@@ -508,7 +508,7 @@ ChatAgent 时代常见流程是：`核心评测员对齐 -> 外包对齐 -> 机�
 
 | [美团正式发布 CatPaw：全场景 AI Agent，从个人提效到企业智能化](https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651783056&idx=1&sn=c5c7f73638bc777077e1b88b6f6acebd&scene=21#wechat_redirect)
 
-| [正式开源！美团 LongCat-2.0 同步开放国产卡推理代码](https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651783022&idx=1&sn=9c28dd11a4d95d5eebbb097e0a1aace0&scene=21#wechat_redirect)
+
 
 ## 我的思考
 
@@ -516,5 +516,6 @@ ChatAgent 时代常见流程是：`核心评测员对齐 -> 外包对齐 -> 机�
 
 ## 相关笔记
 
+- 原文链接：[[https://mp.weixin.qq.com/s/gZKWRqznB8sNBFf69fBIvw]]
 - [[从运行轨迹构建 AI 评估体系]]
 - [[可扩展 Agent Harness 的架构原则]]
