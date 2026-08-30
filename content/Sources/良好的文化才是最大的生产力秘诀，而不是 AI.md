@@ -24,10 +24,6 @@ AI 可以提高生产力，但它会同时放大组织已有的优势和问题�
 - 来源：Engineering Leadership
 - 原文：https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity
 
-## 正文
-
-> 以下为原文正文的中文翻译，已省略赞助广告、订阅提示和评论区。
-
 ### 引言
 
 这件事我已经思考了很久。如今，一切似乎都围绕着“AI”、“AI 工具”和“AI 生产力”展开。
